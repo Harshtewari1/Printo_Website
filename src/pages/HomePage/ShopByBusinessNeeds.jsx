@@ -4,7 +4,7 @@ const ShopByBusinessNeeds = () => {
     const categories = [
         {
             title: "For Startups",
-            img: "https://printo-s3.dietpixels.net/site/Awards/Startups_1753853634.jpg?quality=70&format=webp&w=640", 
+            img: "https://printo-s3.dietpixels.net/site/Awards/Startups_1753853634.jpg?quality=70&format=webp&w=640",
             link: "#",
         },
         {
@@ -25,12 +25,20 @@ const ShopByBusinessNeeds = () => {
     ];
 
     return (
-        <div className=" py-12 bg-purple-50">
-            <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-10">
+        <div className="py-12 bg-purple-50">
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
                 Shop By Business Needs
             </h2>
 
-            <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-18 px-6">
+            <div
+                className="
+          max-w-4xl mx-auto 
+          grid 
+          grid-cols-1 sm:grid-cols-2 md:grid-cols-2 
+          gap-6 
+          px-4 sm:px-6
+        "
+            >
                 {categories.map((cat, index) => (
                     <a
                         key={index}
@@ -41,11 +49,18 @@ const ShopByBusinessNeeds = () => {
                             <img
                                 src={cat.img}
                                 alt={cat.title}
-                                className="w-full h-56 object-cover rounded-t-2xl group-hover:scale-105 transition duration-500"
+                                className="
+                  w-full 
+                  h-40 sm:h-48 md:h-56 
+                  object-cover 
+                  rounded-t-2xl 
+                  group-hover:scale-105 
+                  transition duration-500
+                "
                             />
                         </div>
                         <div className="py-4 text-center">
-                            <h3 className="text-lg font-semibold text-purple-700 group-hover:underline">
+                            <h3 className="text-base sm:text-lg font-semibold text-purple-700 group-hover:underline">
                                 {cat.title} &gt;
                             </h3>
                         </div>
